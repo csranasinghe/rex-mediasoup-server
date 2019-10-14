@@ -1,5 +1,6 @@
-const app = require('http').createServer();
-const io = require('socket.io')(app);
+const app = require('express')();
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
 const config = require('./config');
 const mediasoup = require('mediasoup');
 const port = process.env.PORT || config.server.port;
@@ -7,7 +8,11 @@ const port = process.env.PORT || config.server.port;
 // Map of Room instances indexed by roomId.
 const rooms = new Map();
 
-app.listen(port, () => console.log(`MediaSoup server is listening on port ${port}!`));
+app.get('/', function (req, res) {
+  res.send('<h1 style="text-align: center;">Rex-Mediasoup-Server is running...</h1>');
+});
+
+server.listen(port, () => console.log(`MediaSoup server is listening on port ${port}!`));
 
 // MediaSoup server
 const mediaServer = mediasoup.Server({

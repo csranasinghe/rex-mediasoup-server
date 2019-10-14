@@ -13,6 +13,7 @@
   "author": "Chamath Sandaru",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.17.1",
     "mediasoup": "^2.2.3",
     "socket.io": "^2.1.1"
   },
