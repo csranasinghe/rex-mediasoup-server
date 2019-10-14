@@ -1,0 +1,22 @@
+{
+  "name": "rex-mediasoup-server",
+  "version": "0.0.1",
+  "description": "A basic example of how to use Mediasoup on server side",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mediasoup"
+  ],
+  "author": "Chamath Sandaru",
+  "license": "MIT",
+  "dependencies": {
+    "mediasoup": "^2.2.3",
+    "socket.io": "^2.1.1"
+  },
+  "engines": {
+    "node": "8.11.4"
+  }
+}
